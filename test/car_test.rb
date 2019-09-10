@@ -15,5 +15,13 @@ class CarTest < Minitest::Test
     assert_equal 2015, car.year
     assert_equal "Dodge", car.make
     assert_equal "Challenger", car.model
+    assert_equal "Black", car.color
+  end
+
+  def test_car_can_be_painted
+    car = Car.new(2015, "Dodge", "Challenger")
+    assert_equal "Black", car.color
+    car.paint_car("White")
+    assert_equal "White", car.color
   end
 end
