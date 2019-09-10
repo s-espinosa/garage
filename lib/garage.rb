@@ -19,18 +19,15 @@ class Garage
   end
 
   def paint_all_cars_one_color(color_desired)
-    painted_cars = []
-    @lot.each do |car|
-      painted_cars <<  car.paint_car(color_desired)
+    @lot.map do |car|
+      car.paint_car(color_desired)
     end
   end
 
   def paint_cars_by_newer_modles(year, color)
-    painted_cars = []
-    # binding.pry
-    @lot.each do |car|
-      if car.year >= year
-        painted_cars <<  car.paint_car(color)
+    @lot.map do |car|
+      if car.year <= year
+        car.paint_car(color)
       end
     end
   end

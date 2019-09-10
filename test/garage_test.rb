@@ -53,11 +53,11 @@ class GarageTest < Minitest::Test
     @garage.add_car(@car_2)
     @garage.add_car(@car_3)
     @garage.add_car(@car_4)
-    @garage.paint_cars_by_newer_modles(2005, "Grey")
-    assert_equal "Grey", @car_1.color
-    assert_equal "Grey", @car_2.color
+    @garage.paint_cars_by_newer_modles(2013, "Grey")
+    assert_equal "Black", @car_1.color
+    assert_equal "Black", @car_2.color
     assert_equal "Grey", @car_4.color
-    assert_equal "Black", @car_3.color
+    assert_equal "Grey", @car_3.color
   end
 
 end
